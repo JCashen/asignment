@@ -8,15 +8,7 @@
 &#9989
 {% endif %}
 <br>
-{% if todo.complete %}
-<form action='{{ url_for('incomplete', todo_id=todo.id) }}'>
-	<button style="color:Pink;">Incomplete</button>
-</form>
-{% else %}
-<form action='{{ url_for('complete', todo_id=todo.id) }}'>
-        <button style="color:Pink;">Complete</button>
-</form> 
-{% endif %}
+ 
 <form action='{{ url_for('update', todo_id=todo.id)}}'>
 	<button style="color:Pink;">Update</button>
 </form>

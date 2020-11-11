@@ -1,8 +1,8 @@
 from flask import render_template, redirect, url_for, request
 
 from application import db, app
-from application.models import Todos
-from application.forms import TodoForm
+from application.models import Review, Games
+from application.forms import ReviewForm
 
 @app.route('/')
 def index():
@@ -18,20 +18,6 @@ def add():
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('add.html', form=form)
-
-@app.route('/complete/<int:todo_id>')
-def complete(todo_id):
-    todo_to_update = Todos.query.get(todo_id)
-    todo_to_update.complete = True
-    db.session.commit()
-    return redirect(url_for('index'))
-
-@app.route('/incomplete/<int:todo_id>')
-def incomplete(todo_id):
-    todo_to_update = Todos.query.get(todo_id)
-    todo_to_update.complete = False
-    db.session.commit()
-    return redirect(url_for('index'))
 
 @app.route('/update/<int:todo_id>', methods=['GET', 'POST'])
 def update(todo_id):

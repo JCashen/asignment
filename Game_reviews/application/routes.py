@@ -19,19 +19,19 @@ def add():
         return redirect(url_for('index'))
     return render_template('add.html', form=form)
 
-@app.route('/update/<int:todo_id>', methods=['GET', 'POST'])
+@app.route('/update/<int:review_id>', methods=['GET', 'POST'])
 def update(review_id):
     form = ReviewForm()
     review_to_update = review.query.get(review_id)
     if form.validate_on_submit():
-        review_to_update.task = form.task.data
+        review_to_update.task = review.task.data
         db.session.commit()
         return redirect(url_for('index'))
     elif request.method == 'GET':
         form.task.data = todo_to_update.task
     return render_template('update.html', form=form)
 
-@app.route('/delete/<int:todo_id>')
+@app.route('/delete/<int:review_id>')
 def delete(review_id):
     review_to_delete = review.query.get(review_id)
     db.session.delete(review_to_delete)

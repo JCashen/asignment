@@ -1,18 +1,15 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 
-{% for todo in all_todos %}
+{% for review in all_reviews %}
 
-{{ todo.task }} 
-{% if todo.complete %}
-&#9989
-{% endif %}
+{{ review.review }}
 <br>
  
-<form action='{{ url_for('update', todo_id=todo.id)}}'>
+<form action='{{ url_for('update', review_id=review.id)}}'>
 	<button style="color:Pink;">Update</button>
 </form>
-<form action='{{ url_for('delete', todo_id=todo.id)}}'>
+<form action='{{ url_for('delete', review_id=review.id)}}'>
 	<button style="color:Pink;">Delete</button>
 </form>
 <br><br>

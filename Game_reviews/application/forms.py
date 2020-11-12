@@ -2,23 +2,23 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, ValidationError
 
-from application.models import Review, Games
+from application.models import review, games
 
 class ReviewCheck:
     def __init__(self, message):
         self.message = message
 
     def __call__(self, form, field):
-        all_reviews = Reviews.query.all()
-        for todo in all_reviews:
-            if todo.task == field.data:
+        all_reviews = review.query.all()
+        for review in all_reviews:
+            if review.review == field.data:
                 raise ValidationError(self.message)
 
 class ReviewForm(FlaskForm):
-    task = StringField('Task',
+    review = StringField('Task',
             validators=[
                 DataRequired(),
-                ReviewCheck(message='That Review  already exists')
+                ReviewCheck(message='That Review already exists')
             ]
          )
 

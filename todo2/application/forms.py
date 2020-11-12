@@ -4,23 +4,23 @@ from wtforms.validators import DataRequired, ValidationError
 
 from application.models import Todos
 
-class TodoCheck:
+class ReviewsCheck:
     def __init__(self, message):
         self.message = message
 
     def __call__(self, form, field):
-        all_todos = Todos.query.all()
-        for todo in all_todos:
-            if todo.task == field.data:
+        all_reviews = Reviews.query.all()
+        for reviews in all_reviews:
+            if reviews.review == field.data:
                 raise ValidationError(self.message)
 
-class TodoForm(FlaskForm):
-    task = StringField('Task',
+class ReviewsForm(FlaskForm):
+    review = StringField('Review',
             validators=[
                 DataRequired(),
-                TodoCheck(message='That ToDo already exists')
+                TodoCheck(message='That Review already exists')
             ]
          )
 
-    submit = SubmitField('Add Todo')
+    submit = SubmitField('Add Review')
     

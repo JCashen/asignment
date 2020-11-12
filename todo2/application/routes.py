@@ -6,37 +6,24 @@ from application.forms import TodoForm
 
 @app.route('/')
 def index():
-    all_todos = Todos.query.all()
-    return render_template('index.html', all_todos=all_todos)
+    all_reviews = Reviews.query.all()
+    return render_template('index.html', all_reviews=all_reviews)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
-    form = TodoForm()
+    form = ReviewsForm()
     if form.validate_on_submit():
-        new_todo = Todos(task=form.task.data)
-        db.session.add(new_todo)
+        new_review = Reviews(task=form.task.data)
+        db.session.add(new_review)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('add.html', form=form)
 
-@app.route('/complete/<int:todo_id>')
-def complete(todo_id):
-    todo_to_update = Todos.query.get(todo_id)
-    todo_to_update.complete = True
-    db.session.commit()
-    return redirect(url_for('index'))
 
-@app.route('/incomplete/<int:todo_id>')
-def incomplete(todo_id):
-    todo_to_update = Todos.query.get(todo_id)
-    todo_to_update.complete = False
-    db.session.commit()
-    return redirect(url_for('index'))
-
-@app.route('/update/<int:todo_id>', methods=['GET', 'POST'])
-def update(todo_id):
-    form = TodoForm()
-    todo_to_update = Todos.query.get(todo_id)
+@app.route('/update/<int:reviews_id>', methods=['GET', 'POST'])
+def update(reviews_id):
+    form = ReviewsForm()
+    review_to_update = Todos.query.get(todo_id)
     if form.validate_on_submit():
         todo_to_update.task = form.task.data
         db.session.commit()

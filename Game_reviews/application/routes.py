@@ -14,6 +14,7 @@ def add():
     form = ReviewForm()
     if form.validate_on_submit():
         new_review = review(review=form.task.data)
+        gameslist=games.query.get.all()
         db.session.add(new_review)
         db.session.commit()
         return redirect(url_for('index'))
@@ -37,3 +38,4 @@ def delete(review_id):
     db.session.delete(review_to_delete)
     db.session.commit()
     return redirect(url_for('index'))
+

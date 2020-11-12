@@ -3,6 +3,11 @@
 
 <h2 style="color:pink;"> Add a Review for a Game</h2>
 
+Choose a Game<SELECT name="game">
+	{% for g in gameslist %}
+		<OPTION value={{games.id}}>{{g.game}}</OPTIONS>
+	{% endfor %}
+</SELECT>
 
 <form method='POST' action=''>
 	{{ form.hidden_tag() }}

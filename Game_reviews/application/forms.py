@@ -15,12 +15,12 @@ class ReviewCheck:
                 raise ValidationError(self.message)
 
 class ReviewForm(FlaskForm):
-    review = StringField('Task',
+    review = StringField('Review',
             validators=[
                 DataRequired(),
                 ReviewCheck(message='That Review already exists')
             ]
          )
 
-    submit = SubmitField('Add Todo')
+    submit = SubmitField('Add Review')
     

@@ -3,10 +3,10 @@
 
 <form method='POST' action=''>
 	{{ form.hidden_tag() }}
-	{{ form.task.label }} {{ form.task }}
+	{{ form.review.label }} {{ form.review }}
 	<br>
-	{% if form.task.errors %}
-		{% for error in form.task.errors %}
+	{% if form.review.errors %}
+		{% for error in form.review.errors %}
 			{{ error }}
 		{% endfor %}
 	{% endif %}

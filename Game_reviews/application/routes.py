@@ -5,8 +5,8 @@ from application.forms import ReviewForm
 
 @app.route('/')
 def index():
-    all_reviews = Review.query.all()
     all_games = Games.query.all()
+    all_reviews = Review.query.all()
     return render_template('index.html', all_reviews=all_reviews, all_games=all_games)
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -33,7 +33,7 @@ def update(review_id):
         db.session.commit()
         return redirect(url_for('index'))
     elif request.method == 'GET':
-        form.task.data = todo_to_update.task
+        form.review.data = review_to_update.review
     return render_template('update.html', form=form)
 
 @app.route('/delete/<int:review_id>')

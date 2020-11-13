@@ -3,8 +3,10 @@
 
 
 {% for review in all_reviews %}
-
+{{ review.games.game }}
 {{ review.review }}
+
+
 <br>
  
 <form action='{{ url_for('update', review_id=review.id)}}'>

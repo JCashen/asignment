@@ -3,6 +3,13 @@
 
 <form method='POST' action=''>
 	{{ form.hidden_tag() }}
+        {{ form.gameid.label }} {{ form.gameid }}
+        {% if form.gameid.errors %}
+                {% for error in form.gameid.errors %}
+                        {{ error }}
+                {% endfor %}
+        {% endif %}
+
 	{{ form.review.label }} {{ form.review }}
 	<br>
 	{% if form.review.errors %}

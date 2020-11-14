@@ -27,9 +27,14 @@ def add():
 @app.route('/update/<int:review_id>', methods=['GET', 'POST'])
 def update(review_id):
     form = ReviewForm()
+    all_games = Games.query.all()
+    game_choices = []
+    for game in all_games:
+        game_choices.append((str(game.id), game.game))
+    form.gameid.choices = game_choices
     review_to_update = Review.query.get(review_id)
     if form.validate_on_submit():
-        review_to_update.task = review.task.data
+        review_to_update.review = form.review.data
         db.session.commit()
         return redirect(url_for('index'))
     elif request.method == 'GET':

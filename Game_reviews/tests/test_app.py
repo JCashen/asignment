@@ -24,34 +24,23 @@ class TestBase(TestCase):
         db.drop_all()
 
 class TestViews(TestBase):
-    def text_index_get(self):
+
+    def test_index_get(self):
         response = self.client.get(url_for('index'))
-        self.assertEqual(response.status_code,200)
+        self.assertEqual(response.status_code, 200)
 
     def test_add_get(self):
-        response = self.client.get(url_for('add'))  
+        response = self.client.get(url_for('add', review_id=1))
+        self.assertEqual(response.status_code, 200)
+
+    def test_update_get(self):
+        response = self.client.get(url_for('update', review_id=1))
         self.assertEqual(response.status_code,200)
 
-    def test_add1_get(self):
-        response = self.client.get(url_for('add1', idnum=1))  
-        self.assertEqual(response.status_code,200)   
-
-    def test_updateloc_get(self):
-        response = self.client.get(url_for("updateloc", idnum=1))
-        self.assertEqual(response.status_code,200)
-
-    def test_updateact_get(self):
-        response = self.client.get(url_for("updateact", idnum=1))
-        self.assertEqual(response.status_code,200)
-
-    def test_viewactivity_get(self):
-        response = self.client.get(url_for("viewactivity", idnum=1))
-        self.assertEqual(response.status_code,200)
-
-    def test_deleteloc_get(self):
-        response = self.client.get(url_for("deleteloc", idnum=1))
+    def test_delete_get(self):
+        response = self.client.get(url_for('delete', review_id=1))
         self.assertEqual(response.status_code,302)
 
-    def test_deleteact_get(self):
-        response = self.client.get(url_for("deleteact", idnum=1))
-        self.assertEqual(response.status_code,302)    
+
+
+

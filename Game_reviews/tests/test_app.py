@@ -6,7 +6,7 @@ from application.models import Review, Games
 
 class TestBase(TestCase):
     def create_app(self):
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///",
+        app.config.update(SQLALCHEMY_DATABASE_URI="mysql+pymysql://root:Bungle_11@35.242.174.199/game_review",
         SECRET_KEY='TEST_SECRET_KEY',
         DEBUG=True)
         return app

@@ -14,7 +14,7 @@ from application.models import Games, Review
 class TestBase(LiveServerTestCase):
 
     def create_app(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Bungle_11@35.242.174.199/game_review'
         app.config['SECRET_KEY'] = 'SECRET KEY'
         return app
 

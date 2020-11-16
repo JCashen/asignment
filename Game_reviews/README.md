@@ -94,7 +94,7 @@ Joshua Cashen
 
 [risk]: https://i.imgur.com/XS1fUXt.jpg
 [erd1]: https://i.imgur.com/vp6uuh4.jpg
-[ci]: https://i.imgur.com/ltmyTzt.png
+[ci]: https://i.imgur.com/LPteBAX.png
 [coverage]: https://i.imgur.com/orV6J8P.jpg
 [home]: https://i.imgur.com/aAbAnCN.jpg
 [add]: https://i.imgur.com/tBNdQoT.jpg

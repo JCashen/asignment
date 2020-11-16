@@ -1,7 +1,7 @@
 # Game Review App
 
 ### Resources:
-* Presentation: https://drive.google.com/drive/folders/1l0UabMEmIxZCMybOGpOZ7pdD992q2xq7?usp=sharing
+* Presentation and ERD: https://drive.google.com/drive/folders/1l0UabMEmIxZCMybOGpOZ7pdD992q2xq7?usp=sharing
 * Git Project Board: https://github.com/users/JCashen/projects/2
 
 

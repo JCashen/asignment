@@ -81,9 +81,11 @@ The user is able to add stuff to the home page though by clicking on the add lin
 
 ![add][add]
 
-one redirected the user can see a delete and update button if the update button is pressed they are then taken to another page where they can update their review, and if delete is pressed the review is deleted.
+once redirected the user can see thier review on the homepage
 
 ![homeafteradd][homeafteradd]
+
+now under the review is an update and delete button if the user hits update it takes them to a page where they can update and if they click delete it deleted the review entirely.
 
 ![update][update]
 
@@ -95,6 +97,6 @@ Joshua Cashen
 [ci]: https://i.imgur.com/O7s7DkY.png
 [coverage]: https://i.imgur.com/orV6J8P.jpg
 [home]: https://i.imgur.com/aAbAnCN.jpg
-[add]: https://i.imgur.com/4Tqp5ab.jpg
+[add]: https://i.imgur.com/tBNdQoT.jpg
 [update]: https://i.imgur.com/4Tqp5ab.jpg
 [homeafteradd]: https://i.imgur.com/jaLXGjR.jpg

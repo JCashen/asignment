@@ -63,7 +63,7 @@ this board contains the Scope, user stories and what has been completed from the
 The risk assessment for this project can be found here: https://docs.google.com/spreadsheets/d/1YecfPLMsuUKFU-JJGClkGe4hGCTGjVRufPJmL98_vfk/edit?usp=sharing
 
 ![risk][risk]
-
+![risknew][risknew]
 ## Testing
 pytest is used to run unit tests on the app. this was used as it includes a coverage chart which allows the user to see how much of the program has been tested.
 
@@ -93,6 +93,7 @@ now under the review is an update and delete button if the user hits update it t
 Joshua Cashen
 
 [risk]: https://i.imgur.com/XS1fUXt.jpg
+[risknew]: https://i.imgur.com/rzMi31C.jpg
 [erd1]: https://i.imgur.com/vp6uuh4.jpg
 [ci]: https://i.imgur.com/LPteBAX.png
 [coverage]: https://i.imgur.com/orV6J8P.jpg

@@ -97,3 +97,4 @@ Joshua Cashen
 [home]: https://i.imgur.com/aAbAnCN.jpg
 [add]: https://i.imgur.com/4Tqp5ab.jpg
 [update]: https://i.imgur.com/4Tqp5ab.jpg
+[homeafteradd]: https://i.imgur.com/jaLXGjR.jpg

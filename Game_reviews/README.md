@@ -16,8 +16,6 @@
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
 * [Front-End Design](#front-end-design)
-* [Known Issues](#known-issues)
-* [Future Improvements](#future-improvements)
 * [Authors](#authors)
 
 ## Brief
